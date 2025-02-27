@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] float moveSpeed = 5f;
+
     // Serializing allows you to see the variable in the view port
     // So no need to have public like I thought
 
-    [SerializeField] float xValue = 0f;
-    [SerializeField] float yValue = 0.01f;
-    [SerializeField] float zValue = 0f;
+    
 
     void Start()
     {
@@ -18,6 +18,9 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(xValue, yValue, zValue);
+        float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
+        float yValue = 0f;
+        float zValue = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
+        transform.Translate(xValue , yValue, zValue);
     }
 }
