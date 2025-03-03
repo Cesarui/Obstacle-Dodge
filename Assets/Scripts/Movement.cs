@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        // Calling the function
         PrintInstruction();
     }
 
@@ -23,6 +24,7 @@ public class Movement : MonoBehaviour
 
     void PrintInstruction()
     {
+        // Function that prints all these things out to the console
         Debug.Log("Welcome to the game");
         Debug.Log("Press WASD or Arrow keys to move around");
         Debug.Log("Your job is to dodge as many obstacles as you can:)");
