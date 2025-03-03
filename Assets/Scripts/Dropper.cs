@@ -12,6 +12,7 @@ public class Dropper : MonoBehaviour
 
     void Start()
     {
+        // Cacheing(saving these variables in our memory to use it later
         myMeshRenderer = GetComponent<MeshRenderer>();
         myRigidBody = GetComponent<Rigidbody>();
         myMeshRenderer.enabled = false;
