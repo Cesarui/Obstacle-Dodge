@@ -7,8 +7,11 @@ public class Scorer : MonoBehaviour
     // Logic to track when player hits an object and how many times
     private void OnCollisionEnter(Collision other)
     {
-        hits++;
-        Debug.Log("You've bumped into a thing this many times: " + hits);
+        if (other.gameObject.tag != "Hit")
+        {
+            hits++;
+            Debug.Log("You've bumped into a thing this many times: " + hits);
+        }
     }
 
 }
